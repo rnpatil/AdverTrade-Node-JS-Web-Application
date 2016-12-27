@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html style="min-height: 588px;" class="no-copy-paste">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="shortcut icon" href="../img/header_logo.jpg">
+<title>Adver</title>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/datatables/dataTables.responsive.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/datatables/dataTables.bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/skins/_all-skins.min.css">
+<link rel="stylesheet" type="text/css" href="../css/AdminLTE.css">
+<link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+<link rel="stylesheet" type="text/css" href="../css/custom/overlay.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body class="skin-blue fixed pace-done"
+	style="min-height: 588px;">
+	<% include static/header.htm %>
+	<% include static/overlay.htm %>
+	<div class="wrapper row-offcanvas row-offcanvas-left"
+		style="min-height: 268px;">
+		<% include static/leftPanel.htm %>
+		<aside class="right-side"> <section class="content-header">
+		<br />
+		<h1>
+
+			AdverTrade - Buy & Sell &nbsp;&nbsp;&nbsp;&nbsp;
+		</h1>
+		<div id="message" class="error hide"></div>
+		</section> <section class="content">
+		<div class="box box-danger" id="loading-example">
+			
+			<% include static/header.htm %>
+		</div>
+
+		<div class="row">
+		<% categories.forEach(function(category) { %>
+
+			<form id='<%= category["category"]["name"] %>' action="/browse" method="post">
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-aqua">
+						<div class="inner">
+							<h3>  </h3>
+
+							<h4><%= category["category"]["name"] %></h4>
+							<input type="hidden" value='<%= category["category"]["name"] %>' name='category'>
+
+						</div>
+						<div class="icon">
+							<!-- <img src="../img/electronics.jpeg" class="" alt="Logo Image" /> -->
+							<i class='<%= category["category"]["image"] %>'></i>
+						</div>
+						<a href="javascript:;" name="category"
+							onclick="document.getElementById('<%= category["category"]["name"] %>' ).submit();"
+							class="small-box-footer"> More info <i
+							class="fa fa-arrow-circle-right"></i>
+						</a>
+					</div>
+				</div>
+			</form>
+
+			<% }); %>
+		</div>
+
+		</section> </aside>
+
+	</div>
+
+	<% include static/footer.htm %>
+
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="../js/plugins/datatables/jquery.dataTables.js"></script>
+	<script type="text/javascript"
+		src="../js/plugins/datatables/dataTables.responsive.js"></script>
+	<script type="text/javascript"
+		src="../js/plugins/datatables/dataTables.bootstrap.js"></script>
+	<script type="text/javascript"
+		src="../js/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="../js/AdminLTE/app.js"></script>
+
+	<script type="text/javascript" src="../js/custom/monitorJob.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+
+	<script type="text/javascript"
+		src="../js/custom/detectmobilebrowser.js"></script>
+</body>
+</html>

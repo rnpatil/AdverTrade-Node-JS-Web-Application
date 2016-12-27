@@ -1,0 +1,40 @@
+{
+  "name": "AdverTrade",
+  "version": "0.1.0",
+  "description": "AdverTrade",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "~1.0.0",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "~1.0.0",
+    "ejs": "~0.8.5",
+    "async": "latest",
+    "express": "3.4.8",
+    "express-session": "~1.0.0",
+     "gridfs-stream": "^1.1.1",
+    "method-override": "~1.0.0",
+    "mongoose": "^4.6.5",
+    "mongodb": "~2.0",
+    "multer": "^1.2.0",
+    "morgan": "~1.0.0",
+    "nodemailer": "0.7.1",
+    "passport": "~0.1.17",
+    "passport-facebook": "~1.0.2",
+    "passport-google-oauth": "~0.1.5",
+    "passport-local": "~0.1.6",
+    "passport-twitter": "~1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "node.js",
+    "eclipse",
+    "nodeclipse"
+  ],
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
